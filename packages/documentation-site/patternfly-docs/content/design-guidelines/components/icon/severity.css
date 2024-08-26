@@ -20,8 +20,11 @@
 
 .undefined{
     --pf-v6-c-icon__content--Color: var(--pf-t--global--icon--color--severity--undefined--default);
+<<<<<<< Updated upstream
 }
 
 .subtle{
     --pf-v6-c-icon__content--Color: var(--pf-t--global--icon--color--subtle)
+=======
+>>>>>>> Stashed changes
 }

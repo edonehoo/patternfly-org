@@ -3,12 +3,17 @@ id: Icon
 section: components
 ---
 
+<<<<<<< Updated upstream
 import SeverityCriticalIcon from '@patternfly/react-icons/dist/esm/icons/severity-critical-icon';
+=======
+import CriticalRiskIcon from '@patternfly/react-icons/dist/esm/icons/critical-risk-icon';
+>>>>>>> Stashed changes
 import SeverityImportantIcon from '@patternfly/react-icons/dist/esm/icons/severity-important-icon';
 import SeverityMinorIcon from '@patternfly/react-icons/dist/esm/icons/severity-minor-icon';
 import SeverityModerateIcon from '@patternfly/react-icons/dist/esm/icons/severity-moderate-icon';
 import SeverityNoneIcon from '@patternfly/react-icons/dist/esm/icons/severity-none-icon';
 import SeverityUndefinedIcon from '@patternfly/react-icons/dist/esm/icons/severity-undefined-icon';
+<<<<<<< Updated upstream
 import { Button, Icon, Content, ContentVariants } from '@patternfly/react-core';
 import './severity.css';
 import CheckCircleIcon from '@patternfly/react-icons/dist/esm/icons/check-circle-icon';
@@ -132,3 +137,56 @@ These icons are color coded to help users better understand what a message is tr
 ## Content considerations 
 
 Icons are often most meaningful when paired with text. If you're not certain that all users will recognize an icon on its own, add a descriptive text label or a tooltip. For guidance related to icon tooltips, refer to our [tooltips writing guide.](/ux-writing/tooltips)
+=======
+import { Icon } from '@patternfly/react-core';
+import './severity.css';
+
+## Usage 
+
+## Variations 
+
+### Inline icons
+
+### Standalone icons
+
+### Severity icons
+
+When there is an issue or incident related to a source of data, it is important to communicate the severity of the situation to help users to measure and understand the impact that it may have on business. To support consistency and user understanding, we offer a series of severity icons:
+
+| **Severity level** |  **Icon** | **Color token** | **Usage** |
+| --- | --- | --- | --- |
+| Critical | <Icon iconSize="lg" className="critical"><CriticalRiskIcon /></Icon> | `--pf-t--global--icon--color--severity--critical--default`| Reserve for the highest severity issues. |
+| Important | <Icon iconSize="lg" className="important"><SeverityImportantIcon /></Icon>  | `--pf-t--global--icon--color--severity--important--default` | Use for high-threat issues. |
+| Moderate | <Icon iconSize="lg" className="moderate"><SeverityModerateIcon /></Icon>  | `--pf-t--global--icon--color--severity--moderate--default`| Use for moderate-threat issues. |
+| Minor | <Icon iconSize="lg" className="minor"><SeverityMinorIcon /></Icon>  | `--pf-t--global--icon--color--severity--minor--default`| Use for low-threat issues.  |
+| None | <Icon iconSize="lg" className="none"><SeverityNoneIcon /></Icon> | `--pf-t--global--icon--color--severity--none--default` | Use when there is no security threat.  |
+| Undefined | <Icon iconSize="lg"  className="undefined"><SeverityUndefinedIcon /></Icon> | `--pf-t--global--icon--color--severity--undefined--default` | Use if a severity level has not been determined yet, but is expected to change and be defined later. |
+
+These icons were created with visual weight and color in mind. As the icons progress from less severe to more severe, their visual weight increases.
+
+#### Single issue
+
+When you're displaying information about a single, standalone issue, you must place an appropriate severity level label beside the icon): 
+
+![./img/severity-table-single.png](./img/severity-table-single.png)
+
+
+#### Aggregate issues
+
+![./img/severity-scale.png](./img/severity-scale.png)
+
+Severity icons are particularly useful in components like tables and cards, which display data.
+
+![./img/severity-table-multiple.png](./img/severity-table-multiple.png)
+
+Though they can both be used to communicate severity information, you should not use severity icons in place of [status icons,](/components/alert/design-guidelines#communicating-severity) 
+
+### Status icons
+
+For example, a danger status may indicate that there is a critical issue with a data source, but it is only meant to apply to a single UI element. It is more general than a severity icon: it communicates that there is some kind of critical issue, but a critical severity icon is more specific, and communicates that there is a certain number of critical incidents related to a data source.  
+
+## Content considerations 
+
+
+## Accessibility 
+>>>>>>> Stashed changes

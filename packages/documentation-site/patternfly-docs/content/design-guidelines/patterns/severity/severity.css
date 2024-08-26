@@ -1,0 +1,23 @@
+.critical{
+    color: var(--pf-t--global--icon--color--severity--critical--default);
+}
+
+.important{
+    color: var(--pf-t--global--icon--color--severity--important--default);
+}
+
+.moderate{
+    color: var(--pf-t--global--icon--color--severity--moderate--default);
+}
+
+.minor{
+    color: var(--pf-t--global--icon--color--severity--minor--default);
+}
+
+.none{
+    color: var(--pf-t--global--icon--color--severity--none--default);
+}
+
+.undefined{
+    color: var(--pf-t--global--icon--color--severity--undefined--default);
+}
