@@ -7,7 +7,7 @@ section: developer-resources
 
 # Designing for command-line interfaces
 
-Our CLI handbook offers best practices for designing consistent, usable, and developer-friendly command-line interfaces (CLIs). It supports developers building CLI tools and designers collaborating on technical products. These guidelines particularly helpful for environments where CLI tools are the primary or critical part of the user experience, emphasizing clarity, structure, and user-centered design across command syntax, help documentation, error messaging, and interactive behaviors. 
+Our CLI handbook offers best practices for designing consistent, usable, and developer-friendly command-line interfaces (CLIs). It supports developers building CLI tools and designers collaborating on technical products. These guidelines are particularly helpful for environments where CLI tools are the primary or critical part of the user experience, emphasizing clarity, structure, and user-centered design across command syntax, help documentation, error messaging, and interactive behaviors. 
 
 ## Accessibility considerations
 
