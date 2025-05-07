@@ -151,7 +151,7 @@ There are 2 forms for flags:
 1. **Boolean flags:** Represent on/off or true/false options. 
 
     - Set a sensible default.
-    - Don’t require explicit values unless necessary. For example allow `--force` rather than `--force=true`.
+    - Don’t require explicit values unless necessary. For example, allow `--force` rather than `--force=true`.
 
     ```bash
     tool deploy --dry-run         # Runs without executing
