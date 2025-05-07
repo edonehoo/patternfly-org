@@ -15,33 +15,11 @@ CLI output messages typically fall into one of 3 categories:
 | Warning | Completed actions that require review. |  `⚠️ Model trained, but validation accuracy is low.` |
 | Error | Failed actions. |  `❌ Error: Cannot connect to remote service. Check your network connection or try again with --offline mode.` |
 
+### Success messages
 
-### Output patterns
+To build trust, reinforce that a command worked as intended, and guide users toward their next step, clearly communicate successful actions.
 
-#### Formatting 
-
-To ensure that output is readable: 
-
-- Use spacing, dividers, or indentation to break up large blocks of output.
-- Use consistent headers or labels for repeated outputs (such as listing results or summaries).
-- When your CLI displays lists of items&mdash;such as software versions, available resources, or deployment options&mdash;it should be structured for easy scanning and include guidance when the list becomes long.
-- Show the most relevant or default item first (like the currently installed version).
-- Clearly label the default or active item (like with a "Yes" or "*").
-- [Paginate](#pagination) output when the list exceeds 5–7 items.
-- Use table formatting or columns for consistency.
-- Avoid dumping unstructured text or long, scrollable blobs.
-
-```plaintext
-Results:
-
-✓ 12 files processed
-✓ 2 files skipped (already up to date)
-✓ 1 warning: Unused flag --optimize
-```
-
-#### Success messages
-
-Clearly communicate when an action completes successfully to build trust, reinforce that a command worked as intended, and guide users toward their next step.
+#### Example
 
 ```plaintext
 ✅ Project "my-app" deployed successfully.
@@ -51,20 +29,48 @@ Next steps:
 - Run `tool logs my-app` to view runtime output
 ```
 
-#### Error messages
+### Error messages
 
-When something goes wrong, help users understand what happened, why it happened, and how to fix it. 
+When errors occur, explain what happened, why, and how to fix it.
 
-Like with our standard [UI error writing guidelines](/ux-writing/error-messages), CLI errors should:
-- Be written in plain language. 
-- Not use internal jargon. 
-- Provide suggestions and actionable next steps.
-- End with the most important information, rather than lead with it.
-- Not display stack traces unless a debug flag is enabled.  
+Expanding on our [UI error writing guidelines](/ux-writing/error-messages), CLI errors should:
+- Use plain language, avoiding internal jargon.
+- Offer suggestions and actionable next steps.
+- Conclude with the most important information. This is the opposite of content design for products with GUIs.
+- By default, provide a clean message. Full stack traces or internal logs should only be exposed via debug flags (like `--debug` or `--trace`).
 
-For unexpected or low-level errors:
-- Provide a clean message by default.
-- Use `--debug` or `--trace` flags to expose full stack traces or internal logs.
+#### Examples
+
+1. Generic failure with correction:
+    ```plaintext
+    ❌ Error: Cannot connect to remote service.
+    Check your network connection or try again with `--offline` mode.
+    ```
+
+1. File permission issue:
+    ```plaintext
+    ❌ Error: Unable to write to file.txt
+    You may need to change the file’s permissions or run the command with elevated privileges.
+    ```
+
+1. Command syntax error:
+    ```plaintext
+    ❌ Error: Unrecognized flag --versoin
+    Did you mean: --version ?
+    ```
+
+### Output patterns
+
+#### Formatting 
+
+To ensure that output is readable: 
+1. Structure large outputs:
+    - Use spacing, dividers, indentation, or table/column formats to break up large blocks and avoid unstructured text. 
+    - Ensure consistent headers or labels for repeated information (like results or summaries).
+2. Manage lists effectively:
+    - Structure lists for easy scanning&mdash;including software versions, resources, or deployment options.
+    - Display the most relevant or default item first (like the current version) and clearly label it with "Yes" or "*".
+    - [Paginate](#pagination) lists that exceed 5–7 items.
 
 #### Version listing
 
@@ -72,6 +78,8 @@ When listing version information:
 - Arrange versions top-down from newest to oldest.
 - Clearly mark the current default.
 - Display upgrade paths beside each item.
+
+##### Example
 
 ```plaintext
 Available Versions
@@ -84,7 +92,9 @@ VERSION     DEFAULT    AVAILABLE UPGRADES
 
 #### Pagination
 
-Use pagination to break long lists into pages of 5–7 items at a time. When using pagination, prompt the user with `--more`, `--page`, or allow them to press **Enter** to continue
+Paginate long lists into 5–7 item pages, prompting users to continue with `--more`, `--page`, by pressing the **Enter** key.
+
+##### Example
 
 ```bash
 tool versions list --limit 5
@@ -93,31 +103,31 @@ tool resources list --page 2
 
 #### Sorting and filtering
 
-To help users make sense of large CLI output, allow them to sort and filter as needed. When using sorting and filtering:
-
-- Default sort should be by relevance or recency.
-- Offer flags like `--sort`, `--filter`, or `--status` for flexible output.
-- Make sure the default view meets the needs of most users and avoid requiring flags to make output usable
+To help users make sense of large CLI outputs, provide sorting and filtering options:
+Default to sorting by relevance or recency.- 
+- Offer flags like `--sort`, `--filter`, or `--status` for flexible control.
+- Ensure the default view serves most users without requiring flags for basic usability.
 
 ## Help documentation
 
-Users must have access to help within a CLI. 
+CLIs must provide accessible in-application help. To ensure its relevance, write from a new user's perspective: would they immediately know what to do?
 
-When considering the relevance of help documentation, think like a user and ask yourself: “If I saw this message for the first time, would I know what to do?”
-
-When writing help documentation: 
-- Keep help text brief but meaningful.
-- Avoid internal jargon and acronyms without explanation.
-- Ensure consistency across all commands.
-- If your CLI supports [interactive prompts](#interactive-prompts), reference `--help` in the prompt.
+Effective help documentation is:
+- Brief yet meaningful.
+- Clear, avoiding unexplained jargon or acronyms.
+- Consistent across all commands.
+- Referenced in [interactive prompts](#interactive-mode) (via `--help`) if supported.
 
 ### Writing help output
-Help output should be consistent across commands and follow a clear structure, containing these elements:
-- **Description:** What the command does in plain language.
-- **Usage:** Syntax with required arguments and flags.
-- **Examples:** At least 1 clear, real-world usage example.
-- **Flags:** A list of available options with brief, actionable descriptions.
-- **Documentation link (optional):** If more detail exists elsewhere.
+
+Structure help output consistently with these elements:
+- **Description:** Plain language explanation of the command’s function.
+- **Usage:** Command syntax, including required arguments and flags.
+- **Examples:** At least 1 clear, real-world usage scenario.
+- **Flags:** List of available options with brief, actionable descriptions.
+- **Documentation link (optional):** For further details.
+
+#### Example 
 
 ```bash
 Usage:
@@ -140,23 +150,24 @@ For more information, visit: https://Examples:.com/docs/deploy
 ### Documenting flags
 Well-documented flags improve discoverability, reduce user error, and make it easier for contributors and users to understand the CLI’s capabilities.
 
-Clear flag documentation should be included in:
-- `--help` output for the command.
+Document flags clearly in:
+- A command's `--help` output.
 - Official CLI documentation or reference guides.
 - Interactive prompt hints (if applicable).
 
 #### Best practices
-- Use **descriptive names** that clearly indicate the flag’s purpose. 
-- Document the **flag’s input type** (string, boolean, int, and so on). 
-- Show the **default value** if one exists.  
-- Mention whether the flag is optional or required.  
-- Avoid vague or ambiguous flag names (like `--flag1`, `--optionX`).
+- Use descriptive names that clearly indicate the flag’s purpose. Avoid ambiguous names like `--flag1`.
+- Document the input type (such as string, boolean, or int).
+- Show any default value.
+- Mention if the flag is optional or required.
 
-Flag documentation should show the following:
+Flag documentation should generally follow this format:
 
 ```plaintext
 --flag-name <type>     Description of what this flag does (default: value)
 ```
+
+##### Example
 
 ```plaintext
 Flags:
@@ -168,19 +179,19 @@ Flags:
 ```
 
 For boolean flags that act as switches (true/false):
-- Default to false unless enabled.
-- Do not require an explicit value (for example, use `--force`, not `--force=true`).
+- Typically default to `false`.
+- Don't require an explicit value (for example, use `--force`, not `--force=true`).
 - Clearly state what enabling the flag does.
-- When possible, explain how the flag affects the command’s behavior or when it’s most useful:
+- When possible, explain the flag's effect or common use cases:
 
-```plaintext
---dry-run     Simulate the command without making changes. Useful for validation or preview.
---watch       Continuously stream status updates until completion.
-```
+    ```plaintext
+    --dry-run     Simulate the command without making changes. Useful for validation or preview.
+    --watch       Continuously stream status updates until completion.
+    ```
 
 ## Interactive mode
 
-The CLI's interactive mode uses prompts to guide users through a process step-by-step., commonly for setup wizards, configuration flows, or  input that is too complex to pass in a single command.
+Interactive mode guides users step-by-step with prompts, commonly for setup wizards, configuration flows, or complex inputs not suited for single commands.
 
 ### When to use interactive mode
 
@@ -193,50 +204,45 @@ User interactive mode for:
 
 Do not use interactive mode for: 
 - Simple one-off tasks.
-- Repetitive actions (such as run, delete, status).
-- Commands that will be run in automation, CI, or pipelines.
+- Repetitive actions, such as run, delete, status.
+- Automated commands, such as in CI/CD pipelines.
+- Essential inputs that could be passed as flags.
 
 ### Writing interactive prompts 
 
-When writing interactive prompts, follow these best practices:
+When designing interactive prompts, prioritize flags for essential inputs and use prompts primarily for optional choices or guided multi-step processes. 
 
-- Use prompts for guided setup, not quick or repeatable tasks.
-- Let users bypass prompts with a `--non-interactive` or `--yes` flag.
-- Clearly show default values and how to accept them.
-- Offer inline help (for example "? for help").
-- Don’t require prompts for essential inputs that could be passed as flags.
+Key considerations include:
 
 #### Default values
-
 Choose defaults based on common use cases or sensible fallbacks.
 
-    - Tell users that pressing Enter will accept the default and will proceed with a pre-set value if left blank. 
-    - Always indicate the default value in a clear, visual way. For example, `[default]`, `(default)` or `(Y/n)`/`(y/N)`.
-    - Avoid making the first item the default unless it is truly the most likely choice.
-    - Don’t hide defaults in help text or assume the user knows them.
-    - Log or echo the selected value for confirmation (even if it was a default).
+- Make defaults obvious&mdash;don't hide them in help text or assume user knowledge.
+- Visually indicate defaults clearly (such as `[default]`, `(default)` or `(Y/n)`/`(y/N)`).
+- If using a list, ensure a first-item default is genuinely the most common choice.
+- Explain that pressing **Enter** accepts the default (if the input is left blank).
+- Confirm (log or echo) the selected value after the prompt, even if it was the default.
 
 #### Clarity
 
-Be as clear as possible in all messaging.
+Ensure prompts are as clear as possible.
 
-    - Use question-style phrasing, such as "Enable autoscaling? (Y/n)".
-    - Be clear if a prompt is optional.
-    - Offer help inline, such as "Output directory [? for help]".
-    - Avoid chaining too many prompts.
-    - CLIs should clearly communicate when an action completes successfully.
-    - Confirm successful actions with a short, clear message  
-- Use consistent formatting, symbols, or icons for different message types  
-- Include optional next steps when appropriate (e.g., view status, open logs)  
-- Avoid silent success unless explicitly requested (e.g., in `--quiet` mode)
+- Phrase prompts as questions.
+    - For example: "Enable autoscaling? (Y/n)"
+- Clearly state if responding to a prompt is optional.
+- Offer inline help where useful.
+    - For example: "Output directory [? for help]"
+- Avoid chaining an excessive number of prompts.
+- Include optional next steps when appropriate (like view status, open logs). 
+- Avoid silent success unless explicitly requested (like in `--quiet` mode).
 
 #### User control
 
-Give users control over their experience in the CLI.
+Empower users with control over their CLI experience.
 
-    - Consider using a `--guided` flag to trigger multi-step flows intentionally.
-    - Provide flags to bypass prompts.
-    - Allow users to cancel or exit flows early with **Ctrl**+**C**.
+- Consider using a `--guided` flag to let users intentionally trigger multi-step interactive flows.
+- Let users bypass prompts with a `--non-interactive` or `--yes` flag.
+- Allow users to cancel or exit flows early with **Ctrl+C** or a similar command.
 
 ### Example 
 
