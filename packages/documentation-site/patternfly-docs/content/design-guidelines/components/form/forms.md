@@ -99,25 +99,25 @@ Use a [select list](/components/menus/select/design-guidelines) to enable users 
 
 Data inputs can be arranged in 3 different ways depending on space considerations.
 
-1. **Horizontal placement:** Use when vertical space is scarce or to arrange three inputs or fewer.
+1. **Horizontal placement:** Use when vertical space is scarce or to arrange 3 inputs or fewer.
 
-    <div class="ws-docs-content-img">
-    ![Example of data inputs arranged horizontally.](./img/form-data-horizontal.svg)
-    </div>
+<div class="ws-docs-content-img">
+![Example of data inputs arranged horizontally.](./img/form-data-horizontal.svg)
+</div>
     
 
-2. **Vertical placement:** Use when quick scanning is ideal or to arrange more than three inputs.
+2. **Vertical placement:** Use when quick scanning is ideal or to arrange more than 3 inputs.
 
-    <div class="ws-docs-content-img">
-    ![Example of data inputs arranged vertically.](./img/form-data-vertical.svg)
-    </div>
+<div class="ws-docs-content-img">
+![Example of data inputs arranged vertically.](./img/form-data-vertical.svg)
+</div>
 
 
 3. **Multi-column grid:** Use when space is constricted and labels are short.
 
-    <div class="ws-docs-content-img">
-    ![Example of data inputs arranged in a multi-column grid.](./img/form-data-columns.svg)
-    </div>
+<div class="ws-docs-content-img">
+![Example of data inputs arranged in a multi-column grid.](./img/form-data-columns.svg)
+</div>
 
 ### Buttons
 
@@ -186,7 +186,7 @@ For more information about writing effective placeholder text, see the [content]
 ![Example of an input field with helpter text underneath.](./img/form-helper-text.svg)
 </div>
 
-Helper text is brief, permanent text below a form field that helps a user provide the right information specific to that input, like entering a unique project name or data point. Helper text may wrap to two lines, but it should never extend past the width of its corresponding input field.
+Helper text is brief, permanent text below a form field that helps a user provide the right information specific to that input, like entering a unique project name or data point. Helper text may wrap to 2 lines, but it should never extend past the width of its corresponding input field.
 
 Align helper text with the specific input for which it offers assistance. If your helper text contains information about the label rather than the input field, place it with the label instead.
 
@@ -228,7 +228,7 @@ When a form field submission results in an error, let users know as soon as poss
 
 In some use cases, you may choose to use inline errors at the top of a form to emphasize errors within it. These inline errors should always be a supplemental component used in addition to field level errors. 
 
-After a form error occurs, users won’t have access to placeholder text (replaced by their input) or helper text (replaced by field level errors). Because these resources will be unavailable until the error is corrected, error messages should answer two essential questions:
+After a form error occurs, users won’t have access to placeholder text (replaced by their input) or helper text (replaced by field level errors). Because these resources will be unavailable until the error is corrected, error messages should answer 2 essential questions:
 
 * What is the error?
 * What can the user do to fix it?
@@ -239,7 +239,7 @@ After a form error occurs, users won’t have access to placeholder text (replac
 ![Visualized example for right vs. wrong way to write an input error. Do communicate specific format errors; don't just indicate an 'invalid input.](./img/form-errors.svg)
 </div>
 
-Errors can be validated at two points in the workflow: On loss of focus or on submission. The error state you use depends on whether validation happens on the client side (loss of focus) or server side (on submission).
+Errors can be validated at 2 points in the workflow: On loss of focus or on submission. The error state you use depends on whether validation happens on the client side (loss of focus) or server side (on submission).
 
 #### Error validation on loss of focus
 Validation on loss of focus occurs as soon as a field loses focus. It alerts users of errors immediately after they complete their input through inline validation, allowing them to quickly see and address issues.
@@ -313,7 +313,7 @@ To view an interactive example of field groups, see our [field groups demo](/com
 Forms may be placed in several contexts including on a page, in a wizard, or in a modal. Your chosen form placement may impact specific spacing considerations, but general form spacing requirements apply across these contexts.
 
 ### General spacing
-Always add 24px of spacing underneath each form input. If a form input includes helper text, this 24px spacing should start below the helper text. Spacing between data inputs like checkboxes and radio buttons should also be 24px when on the same line or stacked on one another. For more spacing information, consult the [PatternFly spacer guidelines](/design-foundations/spacers#considering-line-height-and-padding).
+Always add a lg spacer after each form input and a 2xl spacer between the final form input and the buttons. If a form input includes helper text, this spacer should start below the helper text. There should also be a lg spacer between data inputs (like checkboxes and radio buttons) when they're on the same line or stacked on each other. For more spacing information, consult the [PatternFly spacer guidelines](/design-foundations/spacers#considering-line-height-and-padding).
 
 <div class="ws-docs-content-img">
 ![Example of a basic form with spacers to show how elements should be spaced within it.](./img/form-spacing.svg)
@@ -322,7 +322,7 @@ Always add 24px of spacing underneath each form input. If a form input includes 
 
 ### Button spacing
 
-Place submit or cancel buttons on the bottom left of a form, left-aligned with all form fields. Buttons should be placed 16px apart in all contexts. Buttons for actions other than submitting or canceling the form may be placed elsewhere within a form depending on your use case. 
+Place submit or cancel buttons on the bottom left of a form, left-aligned with all form fields. Buttons should have a md spacer between them in all contexts. Buttons for actions other than submitting or canceling the form may be placed elsewhere within a form depending on your use case. 
 
 For more guidance on button placement, see our [button guidelines](/components/button/design-guidelines#button-placement). 
 
@@ -332,7 +332,7 @@ For more guidance on button placement, see our [button guidelines](/components/b
 
 ### Forms on a page
 
-Left and top align a form within a page’s content area. A minimum of 24px padding should separate the form from neighboring elements.
+Left and top align a form within a page’s content area. There should be at least a lg spacer of padding separating the form from neighboring elements.
 
 <div class="ws-docs-content-img">
 ![Example of a form on a page.](./img/form-page-spacing.svg)
@@ -343,12 +343,12 @@ When placing a form on a page, its width is customizable to your use case and sh
 * The length of inputted content.
 * The widest input field in the form.
 
-To accommodate lengthy input fields, the maximum suggested width is 880px. Use your best judgement based on the context and content of your form –– 880px is typically too wide for most use cases.
+To accommodate lengthy input fields, the maximum suggested width is 880px. Use your best judgement based on the context and content of your form&mdash;880px is typically too wide for most use cases.
 
-All input fields in your form will be the same length, except for in a [multi-column form](#multi-column-forms) where you may place two or more adjacent fields in a single line. In a multi-column form, form inputs will share available width on that line.
+All input fields in your form will be the same length, except for in a [multi-column form](#multi-column-forms) where you may place 2 or more adjacent fields in a single line. In a multi-column form, form inputs will share available width on that line.
 
 ### Forms in a wizard
-Similar to an in-page form, forms in wizards should be left-aligned in the content area and have a minimum of 24px padding separating its content from neighboring elements. 
+Similar to an in-page form, forms in wizards should be left-aligned in the content area and have at least a lg spacer of padding separating its content from neighboring elements. 
 
 In a wizard, form error validation should occur when or by the time the user clicks the “Next” button. Don’t wait until the user has completed the whole wizard to notify them of possible errors and their location.
 
@@ -357,7 +357,7 @@ In a wizard, form error validation should occur when or by the time the user cli
 </div>
 
 ### Forms in a modal
-Forms in a modal should be horizontally centered with the modal background and fill the modal width, leaving 24px between the form content and the modal background edges.
+Forms in a modal should be horizontally centered with the modal background and fill the modal width, leaving an xl spacer between the form content and the modal background edges.
 
 <div class="ws-docs-content-img">
 ![Example of a form in a modal.](./img/form-modal.svg)
@@ -492,7 +492,7 @@ Never write essential information in placeholder text. Screen readers like JAWS 
 
 ### Multiple forms on a page
 
-Whenever possible, default to including one form per page. Placing multiple forms on the same page may cause unnecessary confusion.
+Whenever possible, default to including 1 form per page. Placing multiple forms on the same page may cause unnecessary confusion.
 
 If multiple forms live on the same page, multiple submit buttons will, too. If both actions use the same button text, users accessing the page via screen reader won’t be able to distinguish between them. In this instance, descriptive button text is crucial to support successful form completion and submission for all users. 
 
