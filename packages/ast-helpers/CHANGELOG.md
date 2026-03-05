@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0-alpha.345 (2026-03-04)
+
+
+### Bug Fixes
+
+* **deps:** bump various dependencies, update screenshots, clean up build logging ([#4947](https://github.com/patternfly/patternfly-org/issues/4947)) ([2d5fec3](https://github.com/patternfly/patternfly-org/commit/2d5fec39ddb8aa32ce78c9a63cdfc1653692b193))
+
+
+
+
+
+# 1.4.0-alpha.344 (2026-02-19)
+
+**Note:** Version bump only for package @patternfly/ast-helpers
+
+
+
+
+
+# 1.4.0-alpha.343 (2026-02-19)
+
+
+### Bug Fixes
+
+* **theme switch:** change unified theme class name ([#4934](https://github.com/patternfly/patternfly-org/issues/4934)) ([1caa470](https://github.com/patternfly/patternfly-org/commit/1caa470c123ecaacb36cb732eae844616717fc9b))
+
+
+
+
+
+# 1.4.0-alpha.342 (2026-02-16)
+
+
+### Features
+
+* **theme-switcher:** enhance theme switcher for theme development/testing ([#4929](https://github.com/patternfly/patternfly-org/issues/4929)) ([cf5a959](https://github.com/patternfly/patternfly-org/commit/cf5a95937b6a534f76e39cb4b2a19511842fbf2b))
+
+
+
+
+
+# 1.4.0-alpha.341 (2026-02-11)
+
+
+### Bug Fixes
+
+* **trainings:** updated trainings and fixed linked codesandboxes ([#4923](https://github.com/patternfly/patternfly-org/issues/4923)) ([e76918a](https://github.com/patternfly/patternfly-org/commit/e76918a7653d0106e396685e5b5a027925a47327))
+
+
+
+
+
 # 1.4.0-alpha.340 (2026-02-06)
 
 
