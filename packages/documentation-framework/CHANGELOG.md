@@ -3,6 +3,74 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.36.6 (2026-03-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.36.5 (2026-03-11)
+
+
+### Bug Fixes
+
+* Changes for docs-gen v6 ESM compatibility ([#4956](https://github.com/patternfly/patternfly-org/issues/4956)) ([ce09638](https://github.com/patternfly/patternfly-org/commit/ce0963869e626e790ff36f59d745a625c7b36bdf))
+
+
+
+
+
+## 6.36.4 (2026-03-05)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.36.3 (2026-03-04)
+
+
+### Bug Fixes
+
+* **deps:** bump various dependencies, update screenshots, clean up build logging ([#4947](https://github.com/patternfly/patternfly-org/issues/4947)) ([2d5fec3](https://github.com/patternfly/patternfly-org/commit/2d5fec39ddb8aa32ce78c9a63cdfc1653692b193))
+
+
+
+
+
+## 6.36.2 (2026-02-19)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.36.1 (2026-02-19)
+
+
+### Bug Fixes
+
+* **theme switch:** change unified theme class name ([#4934](https://github.com/patternfly/patternfly-org/issues/4934)) ([1caa470](https://github.com/patternfly/patternfly-org/commit/1caa470c123ecaacb36cb732eae844616717fc9b))
+
+
+
+
+
+# 6.36.0 (2026-02-16)
+
+
+### Features
+
+* **theme-switcher:** enhance theme switcher for theme development/testing ([#4929](https://github.com/patternfly/patternfly-org/issues/4929)) ([cf5a959](https://github.com/patternfly/patternfly-org/commit/cf5a95937b6a534f76e39cb4b2a19511842fbf2b))
+
+
+
+
+
 ## 6.35.1 (2026-02-11)
 
 
