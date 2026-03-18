@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.36.6 (2026-03-16)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.36.5 (2026-03-11)
+
+
+### Bug Fixes
+
+* Changes for docs-gen v6 ESM compatibility ([#4956](https://github.com/patternfly/patternfly-org/issues/4956)) ([ce09638](https://github.com/patternfly/patternfly-org/commit/ce0963869e626e790ff36f59d745a625c7b36bdf))
+
+
+
+
+
 ## 6.36.4 (2026-03-05)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
