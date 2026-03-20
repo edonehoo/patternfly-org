@@ -6,6 +6,80 @@ section: releases
 import '../get-started/get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
+<Timestamp date={new Date(2026, 0)}>January 2026</Timestamp>
+
+## PatternFly 6.5
+
+For our Q2 2026 release, we’re aligning the default theme with Red Hat brand, introducing a new unified theme, expanding contrast modes, shipping new components and page layouts, and growing AI tooling and documentation. Details below are organized for drafting; each bullet notes what to link or emphasize in the published highlights.
+
+### Promoted package versions
+
+*Add when 6.5 is released:* changelog links for `patternfly/patternfly`, `patternfly/react`, extensions, and pinned npm versions (same format as prior releases).
+
+### Default theme: brand alignment and design refinements
+
+- **Brand alignment of the default theme** — Summarize token and visual updates that bring products closer to Red Hat brand.
+- **Links, navigation accents, tab accents, control borders** — Describe the new treatment for links and accents; call out other default-theme design changes as needed.
+- **Cards** — Updates driven by user feedback (e.g., subtle border and shadow).
+
+### Red Hat brand icons
+
+- Explain what the new RH brand icons are and how they differ from previous sets.
+- Link to documentation on **what the icons are** and **how to swap icons in product** for the new RH brand icons. *(Add final doc URL.)*
+
+### New components
+
+- **Hero**
+- **Featured card**
+
+### Unified theme
+
+- Introduce the new **unified theme** and how it relates to the default theme.
+- **Blog** — Link to a post on the process: why we did it, collaborators, research, screenshots, and how glass fits in.
+- **Alignment with Red Hat Design System (RHDS)** — Link to RHDS **release notes** and/or **Jira** (or equivalent) tracking RHDS work.
+- Note that the unified theme **leverages the new glass contrast mode by default** (see **Glass mode** under [New contrast modes](#new-contrast-modes) below).
+- **Docs experience** — Emphasize the new toggle on the site to preview changes to **accent color**, **border radii**, and other variables *(list any additional toggles)*.
+
+### New contrast modes
+
+#### High contrast mode
+
+- Available in **both** the default and unified themes.
+- Link to the **[high contrast theming handbook](/foundations-and-styles/theming/high-contrast-handbook)** *(confirm path if it moves for 6.5)*.
+- Summarize **research**; link to **blog** (rationale, collaborators, research, screenshots).
+
+#### Glass mode
+
+- Available in **both** the default and unified themes.
+- Link to the **new glass / unified theming handbook** *(add URL when published)*.
+- Summarize **research**; link to **blog** as above.
+- **Traditional page layout in glass mode** — Background image, banded masthead, floating side navigation.
+
+### New page layouts
+
+- **Docked nav** — Link to docs/demos; include screenshots.
+- **Compass** — Link to docs/demos; include screenshots.
+
+### Adoption and rollout
+
+- **Non-breaking change** — How teams pull in the release.
+- **Opt-in to new styles/themes** — e.g. theme picker or equivalent pattern.
+- **Design review** — When and how to engage design.
+- **Website / documentation redesign** — Reference **research readouts** and link to **blog** content.
+
+### AI tooling
+
+- **MCP** — Link to **new MCP documentation** *(add URL)*; link to **blog(s)**.
+- **Seed apps** — Link to seed applications, especially any **Compass-themed** sample *(ensure app is updated for 6.5)*.
+- **PatternFly CLI** — Optional highlight; possible **blog** (e.g. Don).
+- **Plug-ins / skills** — Brief note if applicable.
+
+### Design kit updates
+
+- Summarize Figma/design kit changes for 6.5 and where to download or read release notes.
+
+<Divider />
+
 <Timestamp date={new Date(2025, 9)}>October 2025</Timestamp>
 
 ## PatternFly 6.4
