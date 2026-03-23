@@ -14,7 +14,35 @@ Theming is supported in PatternFly through [our design token system](/foundation
 
 ## PatternFly themes
 
-The following themes are currently supported across PatternFly components and are designed to meet specific [WCAG accessibility standards](https://www.w3.org/WAI/standards-guidelines/wcag/). You can explore our different themes on our website by toggling your display preferences in our site's masthead dropdown. 
+PatternFly supports **light**, **dark**, and **high contrast** display modes across components. Those modes are designed to meet specific [WCAG accessibility standards](https://www.w3.org/WAI/standards-guidelines/wcag/). You can explore them on this site by toggling display preferences in the masthead.
+
+You can also choose between two **theme families**—**default** and **unified**—that layer on top of light, dark, and high contrast. Both families receive the same foundational token and interaction updates described below; the unified theme adds RHDS-aligned styling and enables glass contrast mode by default.
+
+### Default and unified theme families
+
+- **Default** — The standard PatternFly theme used by most products today.
+- **Unified** — A theme aligned with the [Red Hat Design System (RHDS)](https://ux.redhat.com/) for closer visual consistency with other Red Hat experiences. For RHDS release information, roadmap, and design guidance, see the resources published on [ux.redhat.com](https://ux.redhat.com/) *(update this link to a specific release-notes or changelog page when available)*.
+
+#### Updates in both default and unified themes
+
+The following changes apply in **both** the default PatternFly theme and the unified theme (across light, dark, and high contrast modes where applicable):
+
+- **Control borders** — A new **control border** token improves non-text contrast and makes control boundaries easier to perceive for accessibility.
+- **Cards** — Cards use **subtle borders and shadows** to define surfaces without heavy chrome.
+- **Navigation** — Selected navigation items show an **accent mark** so the current location is clearer.
+- **Expand and collapse** — **Expand/collapse** interactions use an updated **up/down** affordance for a more consistent vertical pattern.
+
+### Unified theme
+
+The unified theme is optional: opt in when your product should align with RHDS visuals and token choices. It supports the same **light**, **dark**, and **high contrast** modes as the default theme.
+
+**Glass contrast mode** is enabled **by default** in the unified theme. Glass adjusts surfaces, layering, and contrast for a distinct glass-like treatment. For implementation details, see [Glass contrast mode](#glass-contrast-mode).
+
+### Glass contrast mode
+
+**Glass contrast mode** is a visual mode that works alongside light, dark, and high contrast. The **unified** theme turns it on by default; you can also adopt glass in the **default** theme when your design system allows it.
+
+Use glass when you want the updated page treatments that depend on it (for example, background imagery, banded mastheads, and floating side navigation in traditional layouts). A dedicated glass / unified theming handbook will be linked here when it is available.
 
 ### Light mode
 
