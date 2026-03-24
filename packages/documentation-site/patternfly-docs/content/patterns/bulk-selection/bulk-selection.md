@@ -16,7 +16,7 @@ You can add a bulk selection control in the toolbar of a content view. This cont
 1. **Bulk selector:** A split button that combines a selection checkbox with a dropdown menu toggle.
 
 2. **Menu:** A list of bulk selection options for the related content view. A bulk selection menu should include the following options: 
-    - "Select none", which clears a previous selection.
+    - "Select none", which clears a previous selection. If nothing is selected, this option should be disabled.
     - "Select page", which selects all items on the current page (when pagination is in use).
     - "Select all", which selects all items across all pages. This can be omitted if this isn't supported in your implementation.
     - (Optionally) Additional menu items that match some predetermined filter criteria, such as “Running VMs”, "Errors”, and so on.
