@@ -64,4 +64,4 @@ The main difference between a switch and a checkbox is that a switch changes an 
     </div>
 
 ## Accessibility
-For information regarding accessibility, visit the [checkbox accessibility](/components/checkbox/accessibility) tab.
+For information regarding accessibility, visit the [checkbox accessibility](/components/forms/checkbox/accessibility) tab.
