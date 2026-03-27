@@ -106,35 +106,6 @@ The following table outlines the availability and compatibility of PatternFly fe
 | Branded icons | Optional (Manual) | Default
 | High contrast support | Yes | Yes |
 
-## Using themes in Figma
-
-Our Figma libraries fully support theming. Designers can create a single design and then swap between our themes using the "Apply Variable Mode" toggles in the "Appearance" section of the component properties panel. This makes it easy to visually test and validate designs across all supported themes.
-
-The standard light PatternFly theme will be applied to components by default. If you want your mockups to use our dark or high contrast themes, you will need to adjust the following settings in Figma. 
-
-### Unified theme
-
-To swap between the Default and Unified themes, adjust the themevariable mode. The Unified mode will automatically apply the red accents, pill shapes, and glass treatment.
-
-### Dark mode
-
-To swap your components to our standard dark mode, change the Semantic Color Tokens variable mode to be "Dark":
-
-<div class="ws-docs-content-img">
-![Figma settings menu to select different token variables.](./img/figma-dark-mode.svg)
-</div>
-
-### High contrast mode
-
-To swap your components to our high contrast mode, change the Semantic Dimension Tokens variable mode to be "High Contrast" and choose either "Light - High Contrast" or "Dark - High Contrast" for the Semantic Color Tokens variable mode:
-
-<div class="ws-docs-content-img">
-![Figma settings menu to select different token variables.](./img/figma-hc-mode.svg)
-</div>
-
-### Chart themes
-
-Our charts use a unique token collection, so you will need to adjust chart variable modes separately from components in order to swap themes. To change the variable mode for charts, follow the same steps previously outlined for component theme adjustments. 
 
 ## Best practices
 
@@ -150,3 +121,31 @@ To ensure your application is robust, maintainable, and adaptable across differe
 - **Never use a palette token**: Do not use palette tokens (like `--pf-t--color--blue--20`) directly in your code, as the value is not guaranteed to be consistent across themes.
 - **Use scalable icons:** For icons, use vector images (SVG) or icon fonts instead of raster or bitmap images (PNG, JPEG, GIF, BMP, and so on). This allows you to control their color with CSS `fill` and `color` properties. By assigning a design token to these properties, your icons will automatically change color to match the active theme.
     - If you must use static images, you might need to hide and show different image files based presence of a theme-specific class (like `pf-v6-theme-dark`).
+
+## Theming in Figma
+
+Our Figma libraries fully support theming. Designers can create a single design and then swap between our themes using the "Apply Variable Mode" toggles in the "Appearance" section of the component properties panel. This makes it easy to visually test and validate designs across all supported themes.
+
+The standard light PatternFly theme will be applied to components by default. If you want your mockups to use our dark or high contrast themes, you will need to adjust the following settings in Figma. 
+
+**Note:** Our charts use a unique token collection, so you will need to adjust chart variable modes separately from components in order to swap themes. To change the variable mode for charts, follow the same steps outlined for component theme adjustments. 
+
+### Swapping themes
+
+To swap between the Default and Unified themes, adjust the theme variable mode. The Unified mode will automatically apply the red accents, pill shapes, and glass treatment.
+
+### Swapping color schemes
+
+To swap your components to our standard dark mode, change the Semantic Color Tokens variable mode to be "Dark":
+
+<div class="ws-docs-content-img">
+![Figma settings menu to select different token variables.](./img/figma-dark-mode.svg)
+</div>
+
+### Swapping contrast modes
+
+To swap your components to our high contrast mode, change the Semantic Dimension Tokens variable mode to be "High Contrast" and choose either "Light - High Contrast" or "Dark - High Contrast" for the Semantic Color Tokens variable mode:
+
+<div class="ws-docs-content-img">
+![Figma settings menu to select different token variables.](./img/figma-hc-mode.svg)
+</div>
