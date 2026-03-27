@@ -24,9 +24,14 @@ This tool is valuable for developers, designers, and other stakeholders, like pr
 - **For stakeholders:** By embedding the design system directly into the development workflow, the PatternFly MCP ensures consistency and adherence to design and accessibility standards across all projects. This speeds up development and review cycles by reducing errors and guesswork.
 
 ## What does the PatternFly MCP provide? 
-There are 2 main tools provided by the PatternFly MCP:
+The PatternFly MCP provides 2 primary tools:
 - `usePatternFlyDocs`: Used to answer high-level questions about components, design guidelines, and accessibility. 
 - `fetchDocs`: Used to retrieve the full documentation for a specific component via a URL provided by `usePatternFlyDocs`.
+
+To help power `usePatternFlyDocs` and `fetchDocs`, the MCP provides the following additional resources as an indexed library via the `patternfly://` URI scheme:
+- `patternfly://context`: A high-level overview of PatternFly rules and server capabilities.
+- `patternfly://schemas/{name}`: Direct access to component property specifications.
+- `patternfly://docs/index`: A browsable index of all available documentation.
 
 ## Get started
 You can install the PatternFly MCP in your preferred development environment. Here are the instructions for popular clients.
@@ -75,14 +80,14 @@ You can install the PatternFly MCP in your preferred development environment. He
 Once installed, you can begin asking questions in your chat window and the PatternFly MCP will automatically be referenced for PatternFly-related requests. You can use the PatternFly MCP’s tools for a range of use cases, but here are a few sample scenarios to explore:
 
 ### Verifying installation
-- **Prompt:** "Can you see the PF MCP running? If so, what are the tools?"
-- **Expected AI behavior:** The assistant will confirm it sees the PatternFly MCP and list the available tools: mcp_patternfly-mcp_usePatternFlyDocs and mcp_patternfly-mcp_fetchDocs.
-- **Response:** Yes, the PatternFly MCP is running successfully. There are 2 available tools for you to use: `mcp_patternfly-mcp_usePatternFlyDocs` and `mcp_patternfly-mcp_fetchDocs`.
+- **Prompt:** "Can you see the PatternFly MCP running? If so, what are the tools?"
+- **Expected AI behavior:** The assistant will confirm it sees the PatternFly MCP and list the available tools: `searchPatternFlyDocs` and `usePatternFlyDocs`.
+- **Response:** Yes, the PatternFly MCP is running successfully. There are 2 available tools you can use: `searchPatternFlyDocs` and `usePatternFlyDocs`.
 
 ### Fetching specific documentation
-- **Prompt:** "Fetch docs for a PatternFly card"
-- **Expected AI behavior:**  This will trigger the `fetchDocs` tool. The assistant will return a detailed, organized summary of the card component's documentation, including design guidelines (elements, usage, variations), accessibility guidelines (key requirements, React props), and more.
-- **Response:** “Here’s the current PatternFly card documentation, including the general design guidelines and key accessibility requirements: [documentation summary]“
+- **Prompt:** "Fetch docs for a PatternFly card."
+- **Expected AI behavior:**  This will trigger the `usePatternFlyDocs` tool. The assistant will return a detailed, organized summary of the card component's documentation from the v6 library, including design guidelines (elements, usage, variations), accessibility guidelines (key requirements, React props), and machine-readable schemas.
+- **Response:** “Here’s the PatternFly v6 card documentation, including the general design guidelines and key accessibility requirements: [documentation summary]“
 
 ### Get design guidance
 - **Prompt:** "Which PatternFly components should I use if we want a user to be able to select several different cards from a gallery view?"
