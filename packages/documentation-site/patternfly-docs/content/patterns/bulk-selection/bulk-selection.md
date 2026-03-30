@@ -27,7 +27,7 @@ You can add a bulk selection control in the toolbar of a content view. This cont
 
 1. **Checkbox:** Control that reflects the current selection state of the item. Checkbox states will be automatically updated by bulk selector menu selections, but can also be manually selected. Manually clicking the checkbox in the bulk selector will select all items in the related content view. 
 
-2. **Selection status:** Text label that reflects the total number of items selected. If pagination is in use, it will reflect the number of items selected across all pages.
+2. **Selected item count:** Text label that reflects the total number of items selected. If pagination is in use, it will reflect the number of items selected across all pages.
 
 3. **Selected checkbox:** Indicates that an item has been selected. Either a partial selection (dash) or a full selection (check mark) can be displayed in a checkbox. For more details about the behavior of the checkbox, refer to [checkbox states](#checkbox-states).
 
