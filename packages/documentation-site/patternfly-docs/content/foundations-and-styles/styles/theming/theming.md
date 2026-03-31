@@ -25,13 +25,9 @@ We support 2 pre-built themes in PatternFly. While the visual identity of each t
 
 The Default theme creates the standard, open source PatternFly experience. It is characterized by blue branding, modern, square borders, and simple icons. 
 
-### Unified theme
+### Felt theme
 
-The Unified theme is designed for products within the Red Hat portfolio, providing closer alignment with the [Red Hat Design System](https://ux.redhat.com/). It is characterized by red accent colors, smooth, rounded borderds, Red Hat icons, and glass contrast mode. Core interactive elements, such as primary buttons, continue to use blue for usability.
-
-For implementation guidance, refer to the Unified theme handbook.
-
-For a detailed look at the design philosophy and research behind the Unified theme, check out our Medium article: Title.
+The Felt theme is designed for products within the Red Hat portfolio, providing closer alignment with the [Red Hat Design System](https://ux.redhat.com/). It is characterized by red accent colors, smooth, rounded borderds, Red Hat icons, and [glass contrast mode](#glass). Core interactive elements, such as primary buttons, continue to use blue for usability.
 
 ### Custom themes 
 
@@ -69,6 +65,10 @@ For implementation guidance, refer to the [dark theme handbook](/foundations-and
 
 Contrast modes adjust the surface treatment of UI elements across both color schemes. They are mutually exclusive and can't be applied simultaneously.
 
+### Default contrast
+
+Default contrast mode is used in the Default theme and doesn't include special enhancements to increase contrast in UI elements. This mode doesn't need to be enabled and simply refers to the standard color palette used to achieve level AA accessibility, with contrast ratios of 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphics and other UI components. 
+
 ### High contrast
 
 High contrast mode is focused on improving accessibility for users who require more clarity and higher contrast between UI elements. Turned on by user preference, high contrast mode adjusts border strokes and colors to meet an [enhanced contrast ratio of at least 7:1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html). 
@@ -83,20 +83,20 @@ For implementation guidance, refer to the [high contrast handbook](/foundations-
 
 ### Glass
 
-Glass mode introduces transparency and depth to the UI, creating a layered visual effect. It is enabled in the Unified theme by default, but can also be manually enabled in the Default theme.
+Glass mode introduces transparency and depth to the UI, creating a layered visual effect. It is enabled in the Felt theme by default, but can also be manually enabled in the Default theme.
 
 When glass is enabled, the following changes will apply:
 - **Transparency:** Container backgrounds will become more transparent, allowing the content below to subtly show through.  
 - **Background image:** A pre-approved background image will fill the page body. Product teams must work with the Brand team ensure these images maintain accessibility compliance behind UI elements.
 - **Layout changes:** Layout variations, including the banded masthead and floating side navigation.
 
-For implementation guidance, refer to the glass handbook.
+For more details, including implementation guidance, refer to the [glass mode handbook](/foundations-and-styles/theming/glass-mode-handbook).
 
 ## Feature compatibility 
 
 The following table outlines the availability and compatibility of PatternFly features across themes. 
 
-| Feature | Default theme | Unified theme |
+| Feature | Default theme | Felt theme |
 | --- | --- | --- | 
 | Accent color | Blue | Red | 
 | Interactive element colors | Blue | Blue | 
@@ -132,7 +132,7 @@ The standard light PatternFly theme will be applied to components by default. If
 
 ### Swapping themes
 
-To swap between the Default and Unified themes, adjust the theme variable mode. The Unified mode will automatically apply the red accents, pill shapes, and glass treatment.
+To swap between the Default and Felt themes, adjust the theme variable mode. The Felt mode will automatically apply the red accents, pill shapes, and glass treatment.
 
 ### Swapping color schemes
 
