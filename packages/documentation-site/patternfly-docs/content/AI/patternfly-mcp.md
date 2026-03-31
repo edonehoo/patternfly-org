@@ -6,7 +6,7 @@ import '../components/components.css';
 
 This guide provides an overview of the PatternFly MCP server, including its benefits and instructions for setting up the tool.
 
-For full technical documentation, setup instructions, and to contribute, visit our [PatternFly MCP GitHub repository](https://github.com/patternfly/patternfly-mcp).
+For full technical documentation, setup instructions, and to contribute, visit our [PatternFly MCP GitHub repository](https://github.com/patternfly/patternfly-mcp). You can learn about the server's structure and our  plans for additional features in the [MCP architecture documentation](https://github.com/patternfly/patternfly-mcp/blob/main/docs/architecture.md).
 
 ## What is the PatternFly MCP?
 The **PatternFly MCP** is a tool designed to integrate our design guidelines, component documentation, and accessibility best practices directly into your AI-powered development environment. 
@@ -24,11 +24,11 @@ This tool is valuable for developers, designers, and other stakeholders, like pr
 - **For stakeholders:** By embedding the design system directly into the development workflow, the PatternFly MCP ensures consistency and adherence to design and accessibility standards across all projects. This speeds up development and review cycles by reducing errors and guesswork.
 
 ## What does the PatternFly MCP provide? 
-The PatternFly MCP provides 2 primary tools:
-- `usePatternFlyDocs`: Used to answer high-level questions about components, design guidelines, and accessibility. 
-- `fetchDocs`: Used to retrieve the full documentation for a specific component via a URL provided by `usePatternFlyDocs`.
+The PatternFly MCP provides 2 primary tools (as described in the [MCP usage documentation](https://github.com/patternfly/patternfly-mcp/blob/main/docs/usage.md#built-in-tools)):
+- `searchPatternFlyDocs`: Used to search for PatternFly components and guidelines. It returns names and URLs that can be used for deep-diving into specific documentation.
+- `usePatternFlyDocs`: The primary tool for retrieving content. It fetches full markdown documentation and automatically attaches machine-readable JSON schemas (props, types) for React components.
 
-To help power `usePatternFlyDocs` and `fetchDocs`, the MCP provides the following additional resources as an indexed library via the `patternfly://` URI scheme:
+To help power `searchPatternFlyDocs` and `usePatternFlyDocs`, the MCP provides the following additional resources (as described in the [MCP usage documentation](https://github.com/patternfly/patternfly-mcp/blob/main/docs/usage.md#built-in-resources)) as an indexed library via the `patternfly://` URI scheme:
 - `patternfly://context`: A high-level overview of PatternFly rules and server capabilities.
 - `patternfly://schemas/{name}`: Direct access to component property specifications.
 - `patternfly://docs/index`: A browsable index of all available documentation.
@@ -49,7 +49,7 @@ You can install the PatternFly MCP in your preferred development environment. He
             "command": "npx",
             "args": [
                 "-y",
-                "@patternfly/patternfly-mcp@latest",
+                "@patternfly/patternfly-mcp@latest"
             ],
             "description": "PatternFly React development rules and documentation"
             }
@@ -91,7 +91,7 @@ Once installed, you can begin asking questions in your chat window and the Patte
 
 ### Get design guidance
 - **Prompt:** "Which PatternFly components should I use if we want a user to be able to select several different cards from a gallery view?"
-- **Expected AI behavior:**   This will trigger the `usePatternFlyDocs tool`. The AI assistant will analyze your request and provide a recommendation based on PatternFly's design guidelines, likely suggesting the use of selectable cards and noting that multi-select is achieved using cards with checkboxes.
+- **Expected AI behavior:**   This will trigger the `searchPatternFlyDocs tool`. The AI assistant will analyze your request and provide a recommendation based on PatternFly's design guidelines, likely suggesting the use of selectable cards and noting that multi-select is achieved using cards with checkboxes.
 - **Response:** “If you want to let users select several cards within a gallery view, you could use the selectable cards variation, which would allow multiple card selection via checkboxes that are placed within a card’s header.”
 
 ## Experimentation and feedback
