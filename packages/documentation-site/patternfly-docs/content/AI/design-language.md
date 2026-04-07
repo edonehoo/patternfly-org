@@ -72,7 +72,7 @@ Like the rest of PatternFly's icons, these AI icons are available within the [@p
 In Figma, these icons are available within the Red Hat brand library, rather than those in the PatternFly components library. You can swap to the Red Hat brand library via the icon instance menu:
 
 <div class="ws-docs-content-img">
-![Menu in Figma showing how to switch between PatternFly and Red Hat icon libraries](./img/rh-icons-figma.svg)
+![Menu in Figma showing how to switch between PatternFly and Red Hat icon libraries](./img/rh-icons-figma.png)
 </div>
 
 ### Icon usage guidelines 
