@@ -96,9 +96,13 @@ There are 2 variants of the robot icon, each with different uses:
 
 #### Standard icon
 
-The standard robot icon is intended to be used as an avatar within chatbot conversations. Because avatars have personality and don't have interactive state changes, there are a few background color options available. 
+The standard robot icon is intended to be used as an avatar in chatbot conversations. Because avatars have personality and don't have interactive state changes, there are a few background color options available. 
 
-**Do not** use the standard robot icon for chatbot launch buttons. Instead, use the [UI icon](#ui-icon).
+**Do not** use the standard robot icon for chatbot launch buttons. Instead, use the UI icon.
+
+<div class="ws-docs-content-img">
+![Variety of different color options for the robot avatar, which is a small circle.](./img/robot-avatar.svg)
+</div>
 
 #### UI icon
 
@@ -108,3 +112,7 @@ Because there are more specific accessibility and usability practices for UI ele
 
 - **Do not** use the robot icon in place of the sparkle icon for other kinds of AI experiences. 
 - **Do not** use custom colors, gradients, or shadows with the UI icon.
+
+<div class="ws-docs-content-img">
+![A robot icon used in buttons and controls.](./img/ui-robot-icon.svg)
+</div>
