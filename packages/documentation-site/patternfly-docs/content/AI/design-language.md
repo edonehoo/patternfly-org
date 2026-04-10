@@ -92,7 +92,7 @@ To align with user expectations of chat experiences, we offer a robot icon for u
 - **Do not** use robot icons in place of the sparkle icon.
 - **Do not** represent humans with the robot icons.
 
-There are 2 variants of the robot icon, each with different uses:
+There are 2 variants of the robot icon available within the Red Hat brand library in Figma, each with different uses:
 
 #### Standard icon
 
