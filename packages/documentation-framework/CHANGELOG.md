@@ -3,6 +3,60 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.38.3 (2026-04-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.38.2 (2026-04-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+## 6.38.1 (2026-04-15)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
+# 6.38.0 (2026-04-14)
+
+
+### Features
+
+* **site:** update doc-core to 1.22.0 ([#4946](https://github.com/patternfly/patternfly-org/issues/4946)) ([fc290d0](https://github.com/patternfly/patternfly-org/commit/fc290d030bc34d1728fc9a3948fed4e5b4be5df3))
+
+
+
+
+
+# 6.37.0 (2026-04-06)
+
+
+### Features
+
+* bump preleases and update screenshots ([#4986](https://github.com/patternfly/patternfly-org/issues/4986)) ([96b5a86](https://github.com/patternfly/patternfly-org/commit/96b5a86cf62be502b202e5c736a161439d2c5710))
+
+
+
+
+
+## 6.36.8 (2026-03-25)
+
+**Note:** Version bump only for package @patternfly/documentation-framework
+
+
+
+
+
 ## 6.36.7 (2026-03-18)
 
 **Note:** Version bump only for package @patternfly/documentation-framework
