@@ -6,81 +6,94 @@ section: releases
 import '../get-started/get-started.css';
 import { Divider, Timestamp } from '@patternfly/react-core'; 
 
-<Timestamp date={new Date(2026, 0)}>January 2026</Timestamp>
+<Timestamp date={new Date(2026, 3)}>April 2026</Timestamp>
 
 ## PatternFly 6.5
 
-For our Q2 2026 release, we’re aligning the default theme with Red Hat brand, introducing a new unified theme, expanding contrast modes, shipping new components and page layouts, and growing AI tooling and documentation. Details below are organized for drafting; each bullet notes what to link or emphasize in the published highlights.
+This release brings exciting new options for your PatternFly projects, offering more choice and flexibility in how you use our design system. We’ve subtly refined our core visuals to better align with the Red Hat Design System while still maintaining the classic PatternFly experience you know. 
+
+A major milestone for this release is the introduction of our **new Felt theme**. This theme offers a bold new look for your products, with Red Hat-influenced styles and more visual depth, made possible by our **new glass mode**. More broadly, to ensure all our visual options remain inclusive, we’ve also launched a **high-contrast mode** for WCAG AAA accessibility across all themes.
+ 
+Alongside these theming milestones, we've added a few **new components and variants** tailored for Red Hat journeys, **revamped our website navigation** for better findability, and **expanded our AI resources** to keep your workflows moving forward.
 
 ### Promoted package versions
 
-*Add when 6.5 is released:* changelog links for `patternfly/patternfly`, `patternfly/react`, extensions, and pinned npm versions (same format as prior releases).
+*[Replace with versions from [patternfly-org package.json](https://github.com/patternfly/patternfly-org/blob/main/package.json) before publish.]*
 
-### Default theme: brand alignment and design refinements
+- patternfly/patternfly ([changelog](https://github.com/patternfly/patternfly/releases/tag/v6.5.0))
+    - [@patternfly/patternfly@6.5.0](https://www.npmjs.com/package/@patternfly/patternfly/v/6.5.0)
+- patternfly/react ([changelog](https://github.com/patternfly/patternfly-react/releases/tag/v6.5.0))
+    - [@patternfly/react-charts@8.5.0](https://www.npmjs.com/package/@patternfly/react-charts/v/8.5.0)
+    - [@patternfly/react-code-editor@6.5.0](https://www.npmjs.com/package/@patternfly/react-code-editor/v/6.5.0)
+    - [@patternfly/react-core@6.5.0](https://www.npmjs.com/package/@patternfly/react-core/v/6.5.0)
+    - [@patternfly/react-drag-drop@6.5.0](https://www.npmjs.com/package/@patternfly/react-drag-drop/v/6.5.0)
+    - [@patternfly/react-icons@6.5.0](https://www.npmjs.com/package/@patternfly/react-icons/v/6.5.0)
+    - [@patternfly/react-styles@6.5.0](https://www.npmjs.com/package/@patternfly/react-styles/v/6.5.0)
+    - [@patternfly/react-table@6.5.0](https://www.npmjs.com/package/@patternfly/react-table/v/6.5.0)
+    - [@patternfly/react-templates@6.5.0](https://www.npmjs.com/package/@patternfly/react-templates/v/6.5.0)
+    - [@patternfly/react-tokens@6.5.0](https://www.npmjs.com/package/@patternfly/react-tokens/v/6.5.0)
+- PatternFly extensions
+    - *[List only extensions bumped for 6.5; npm + changelog per package.]*
 
-- **Brand alignment of the default theme** — Summarize token and visual updates that bring products closer to Red Hat brand.
-- **Links, navigation accents, tab accents, control borders** — Describe the new treatment for links and accents; call out other default-theme design changes as needed.
-- **Cards** — Updates driven by user feedback (e.g., subtle border and shadow).
+### Updated theming options 
 
-### Red Hat brand icons
+This release significantly expands our theming options, including style updates, high contrast mode, and our new Felt theme with glass mode. To see these theming options in action, you can swap the theme, color scheme, and contrast mode used on PatternFly.org via the masthead theme switcher. 
 
-- Explain what the new RH brand icons are and how they differ from previous sets.
-- Link to documentation on **what the icons are** and **how to swap icons in product** for the new RH brand icons. *(Add final doc URL.)*
+#### Felt theme
 
-### New components
-
-- **Hero**
-- **Featured card**
-
-### Unified theme
-
-- Introduce the new **unified theme** and how it relates to the default theme.
-- **Blog** — Link to a post on the process: why we did it, collaborators, research, screenshots, and how glass fits in.
-- **Alignment with Red Hat Design System (RHDS)** — Link to RHDS **release notes** and/or **Jira** (or equivalent) tracking RHDS work.
-- Note that the unified theme **leverages the new glass contrast mode by default** (see **Glass mode** under [New contrast modes](#new-contrast-modes) below).
-- **Docs experience** — Emphasize the new toggle on the site to preview changes to **accent color**, **border radii**, and other variables *(list any additional toggles)*.
-
-### New contrast modes
-
-#### High contrast mode
-
-- Available in **both** the default and unified themes.
-- Link to the **[high contrast theming handbook](/foundations-and-styles/theming/high-contrast-handbook)** *(confirm path if it moves for 6.5)*.
-- Summarize **research**; link to **blog** (rationale, collaborators, research, screenshots).
+We're excited to offer PatternFly's first major theme variant: the [Felt](/foundations-and-styles/theming#felt-theme) theme. Aimed at creating more dynamic, and eye-catching experiences, it introduces red accent colors, pill-shaped radii, and our new glass mode for added depth. Best of all&mdash;Felt is built entirely with our design token system, meaning no breaking change is required to add Felt to your product.
 
 #### Glass mode
 
-- Available in **both** the default and unified themes.
-- Link to the **new glass / unified theming handbook** *(add URL when published)*.
-- Summarize **research**; link to **blog** as above.
-- **Traditional page layout in glass mode** — Background image, banded masthead, floating side navigation.
+Glass mode is a new contrast mode, used by default in the Felt theme and optionally available for implementation in the Default theme. "Glass", enabled by an intentional set of designs tokens, adds transparency and depth to specific components so UIs can feel more layered. 
 
-### New page layouts
+When turned on, glass applies to the following components, including their uses within our extensions:
 
-- **Docked nav** — Link to docs/demos; include screenshots.
-- **Compass** — Link to docs/demos; include screenshots.
+- Card
+- Drawer
+- Login page
+- Masthead
+- Navigation (docked)
+- Page
+- Panel
 
-### Adoption and rollout
+For implementation guidance, constraints, details about design tokens, and user opt-out, refer to the [glass mode developer handbook](/foundations-and-styles/theming/glass-mode-handbook/). 
 
-- **Non-breaking change** — How teams pull in the release.
-- **Opt-in to new styles/themes** — e.g. theme picker or equivalent pattern.
-- **Design review** — When and how to engage design.
-- **Website / documentation redesign** — Reference **research readouts** and link to **blog** content.
+#### Style updates
 
-### AI tooling
+We've aligned styles in the classic PatternFly experience (now referred to as our [Default theme](/foundations-and-styles/theming)) more closely with the [Red Hat Design System](https://ux.redhat.com/). These changes enhance brand consistency and usability:
+- **Links:** Now feature a subtle gray dotted underline that becomes a solid, active color on hover/focus.
+- **Navigation:** Active items now utilize a vertical "accent" line for better visual emphasis.
+- **Card:** Added a border shadow to support clarity in dense content views.
+- **Controls:** Borders of controls are now more boldly outlined for better interaction indication.
 
-- **MCP** — Link to **new MCP documentation** *(add URL)*; link to **blog(s)**.
-- **Seed apps** — Link to seed applications, especially any **Compass-themed** sample *(ensure app is updated for 6.5)*.
-- **PatternFly CLI** — Optional highlight; possible **blog** (e.g. Don).
-- **Plug-ins / skills** — Brief note if applicable.
+#### High contrast mode
 
-### Design kit updates
+Now fully released and supported across light and dark color schemes, high contrast mode improves product accessibility and provides users with more control over their experiences. Validated by user research, it utilizes an updated color palette and modified global border rules to meet enhanced WCAG AAA contrast ratios.
 
-- Summarize Figma/design kit changes for 6.5 and where to download or read release notes.
+High contrast can be enabled via a singular CSS class as described in the [high contrast developer handbook](/foundations-and-styles/theming/high-contrast-handbook).
+
+### New components and layouts
+
+We've added new variants to support our evolving visual language and Red Hat-specific user journeys: 
+
+- [Iconography:](/foundations-and-styles/iconography) We’ve updated our icon set to use Red Hat brand icons. This is an automatic change handled via a single class, ensuring cross-platform consistency without much manual lift.
+- [Hero](/components/hero) is a new card-like component for attention-grabbing callouts at the top of pages.
+- [Docked navigation:](/components/navigation/react-demos#docked-nav) A space-saving solution that minimizes navigation items to icons while remaining expandable.
+- [Compass:](/ai/generative-uis/compass) A conversational-first layout for generative UI, placing a ChatBot bar below content with surrounding toolbars.
+
+### Revamped website navigation
+
+Based on extensive user research, we’ve updated the PatternFly.org navigation. Content is now conceptually grouped and labeled to help you find documentation faster.
+
+### New AI tooling
+
+We’ve expanded our AI ecosystem to help you design and develop more efficiently:
+- [PatternFly MCP server:](https://github.com/patternfly/patternfly-mcp) Connects LLMs directly to PatternFly documentation and schemas to ensure more accurate AI conversations and generation.
+- [PatternFly CLI:](https://github.com/patternfly/patternfly-cli) A new command-line tool designed to accelerate your workflow by automating project scaffolding, streamlining version upgrades, and handling repetitive development tasks.
+- [ai-helpers repo:](https://github.com/patternfly/ai-helpers) A collection of plugins and skills for accelerated workflows.
 
 <Divider />
-
-<Timestamp date={new Date(2025, 9)}>October 2025</Timestamp>
 
 ## PatternFly 6.4
 
