@@ -95,6 +95,7 @@ We’ve expanded our AI ecosystem to help you design and develop more efficientl
 
 <Divider />
 
+<Timestamp date={new Date(2025, 9)}>October 2025</Timestamp>
 ## PatternFly 6.4
 
 For the Q3 2025 PatternFly release, we're excited to introduce a beta version of our new high contrast mode, deliver significant accessibility enhancements from our latest audit, and launch a highly requested resizable columns feature for tables. We've also continued to evolve PatternFly AI with community-driven extension updates and new guidelines for AI-assisted code contributions. Updates for these key areas can be found here, in this quarter's release highlights.
