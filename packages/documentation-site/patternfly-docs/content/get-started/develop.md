@@ -74,6 +74,16 @@ If you wish to migrate an existing project to PatternFly you must install and co
     yarn add @patternfly/react-core
     ```
 
+## Using icons
+
+PatternFly utilizes [Red Hat UI icons](https://www.redhat.com/en/about/brand/standards/icons) (`rh-ui-*`), which are available in the [`@patternfly/react-icons` package](https://www.npmjs.com/package/@patternfly/react-icons). Refer to the [icon component](/components/icon) and guidance on the [iconography](/foundations-and-styles/iconography) foundations page for more implementation guidance.
+
+### Migrating to Red Hat icons
+
+We offer a script to help you migrate from previous React icon component names to Red Hat UI icons: [`pfToRhIcons.mjs`](https://github.com/patternfly/patternfly-react/blob/main/packages/react-icons/scripts/icons/pfToRhIcons.mjs). This script allows you to automatically migrate icons across your product, based on a best-guess mapping. Note that it will not catch every icon that can be updated, so you might need to manually check its work and make additional changes. 
+
+While you can still use the previous Font Awesome (`fa`, `fas`, `far`, and similar) or PatternFly (`pf`) icons if your product already relies on them, they are not the recommended path for new work. 
+
 ## Develop with HTML/CSS 
 
 The PatternFly HTML/CSS library contains a collection of code samples that you can use to build interfaces with consistent PatternFly markup and styling.
@@ -117,7 +127,9 @@ Use these files to consume the library. The recommended consumption approach wil
 
 ### Using icons
 
-PatternFly uses [Font Awesome 5](https://fontawesome.com/), which can be utilized in 2 different ways:
+For the recommended Red Hat icon approach (including React), see ["Using icons"](#using-icons) at the start of this page. The following describes using our previously recommended Font Awesome icons in the HTML/CSS bundle, which you may still rely on for legacy markup.
+
+[Font Awesome 5](https://fontawesome.com/) can be utilized in 2 different ways:
 
   * **Built into PatternFly:** By default, Font Awesome is included as part of the PatternFly CSS file. You do not need to do anything else to use this icon font family.
 
