@@ -8,7 +8,7 @@ source: glass-mode-handbook
 
 ## What is glass mode?
 
-Glass mode is a contrast mode option that's enabled in our Felt theme by default and can be manually enabled in our Default theme. Glass adds transparency, blurring, and depth to the UI to create a more dynamic visual effect where brand-approved background images and layered UI elements subtly show through. 
+Glass mode is a contrast mode option that's enabled in our Project Felt theme by default and can be manually enabled in our Default theme. Glass adds transparency, blurring, and depth to the UI to create a more dynamic visual effect where brand-approved background images and layered UI elements subtly show through. 
 
 When turned on, glass applies to the following components, including their uses within our extensions:
 - Card
@@ -28,14 +28,14 @@ Text must never be placed directly on a background image&mdash;it should be plac
 ### Opacity
 
 The default opacity values used in our components have been tested for accessibility, legibility, and visual appeal.
-- Felt light typically utilizes a 40% opacity to maintain AAA contrast for standard text.
-- Felt dark utilizes a 60% opacity to provide better reliability for the dark color scheme.
+- Project Felt light typically utilizes a 40% opacity to maintain AAA contrast for standard text.
+- Project Felt dark utilizes a 60% opacity to provide better reliability for the dark color scheme.
 
 If a product team chooses to override these token values, they are responsible for conducting their own accessibility evaluation to ensure WCAG compliance.
 
 ## Enabling glass mode
 
-Glass mode is designed to work across light and dark color schemes and is enabled by default in our Felt theme. To manually enable glass in our Default theme, add the class `.pf-v6-theme-glass` to your application’s `<html>` tag. When implementing glass with our Default theme, it's important to ensure that glass does not harm the overall accessibility or usability of your product.
+Glass mode is designed to work across light and dark color schemes and is enabled by default in our Project Felt theme. To manually enable glass in our Default theme, add the class `.pf-v6-theme-glass` to your application’s `<html>` tag. When implementing glass with our Default theme, it's important to ensure that glass does not harm the overall accessibility or usability of your product.
 
 ### Technical constraints
 
@@ -49,7 +49,7 @@ There are a few technical constraints to abide by when using glass in your produ
 
 The following tokens are used together to create the glass effect.
 
-| Token | Value (in Felt theme) | Usage |
+| Token | Value (in Project Felt theme) | Usage |
 | --- | --- | --- |
 | `-pf-t--global--background--color--glass--primary--default` | Light mode value: #FFFFFF (60% opacity) <br />  Dark mode value: #292929 at 50% opacity | Base fill for glass containers. |
 | `-pf-t--global--background--filter--glass--default` | Light mode value: #C7C7C7 (25% opacity) <br />  Dark mode value: #C7C7C7 (15% opacity) | Overlay tint used to enhance blur visibility. |

@@ -25,9 +25,9 @@ We support 2 pre-built themes in PatternFly. While the visual identity of each t
 
 The Default theme creates the standard, open source PatternFly experience. It is characterized by blue branding, modern, square borders, and simple icons. 
 
-### Felt theme
+### Project Felt theme
 
-The Felt theme is designed for products within the Red Hat portfolio, providing closer alignment with the [Red Hat Design System](https://ux.redhat.com/). It is characterized by red accent colors, smooth, rounded borderds, Red Hat icons, and [glass contrast mode](#glass). Core interactive elements, such as primary buttons, continue to use blue for usability.
+The Project Felt theme is designed for products within the Red Hat portfolio, providing closer alignment with the [Red Hat Design System](https://ux.redhat.com/). It is characterized by red accent colors, smooth, rounded borderds, Red Hat icons, and [glass contrast mode](#glass). Core interactive elements, such as primary buttons, continue to use blue for usability.
 
 ### Custom themes 
 
@@ -83,7 +83,7 @@ For implementation guidance, refer to the [high contrast handbook](/foundations-
 
 ### Glass
 
-Glass mode introduces transparency and depth to the UI, creating a layered visual effect. It is enabled in the Felt theme by default, but can also be manually enabled in the Default theme.
+Glass mode introduces transparency and depth to the UI, creating a layered visual effect. It is enabled in the Project Felt theme by default, but can also be manually enabled in the Default theme.
 
 When glass is enabled, the following changes will apply:
 - **Transparency:** Container backgrounds will become more transparent, allowing the content below to subtly show through.  
@@ -96,7 +96,7 @@ For more details, including implementation guidance, refer to the [glass mode ha
 
 The following table outlines the availability and compatibility of PatternFly features across themes. 
 
-| Feature | Default theme | Felt theme |
+| Feature | Default theme | Project Felt theme |
 | --- | --- | --- | 
 | Accent color | Blue | Red | 
 | Interactive element colors | Blue | Blue | 
@@ -132,7 +132,7 @@ The standard light PatternFly theme will be applied to components by default. If
 
 ### Swapping themes
 
-To swap between the Default and Felt themes, adjust the theme variable mode. The Felt mode will automatically apply the red accents, pill shapes, and glass treatment.
+To swap between the Default and Project Felt themes, adjust the theme variable mode. The Project Felt mode will automatically apply the red accents, pill shapes, and glass treatment.
 
 ### Swapping color schemes
 
