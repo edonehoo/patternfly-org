@@ -12,7 +12,7 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 This release brings exciting new options for your PatternFly projects, offering more choice and flexibility in how you use our design system. We’ve subtly refined our core visuals to better align with the Red Hat Design System while still maintaining the classic PatternFly experience you know. 
 
-A major milestone for this release is the introduction of our **new Felt theme**. This theme offers a bold new look for your products, with Red Hat-influenced styles and more visual depth, made possible by our **new glass mode**. More broadly, to ensure all our visual options remain inclusive, we’ve also launched a **high-contrast mode** for WCAG AAA accessibility across all themes.
+A major milestone for this release is the introduction of our **new Project Felt theme**. This theme offers a bold new look for your products, with Red Hat-influenced styles and more visual depth, made possible by our **new glass mode**. More broadly, to ensure all our visual options remain inclusive, we’ve also launched a **high-contrast mode** for WCAG AAA accessibility across all themes.
  
 Alongside these theming milestones, we've added a few **new components and variants** tailored for Red Hat journeys, **revamped our website navigation** for better findability, and **expanded our AI resources** to keep your workflows moving forward.
 
@@ -37,15 +37,15 @@ Alongside these theming milestones, we've added a few **new components and varia
 
 ### Updated theming options 
 
-This release significantly expands our theming options, including style updates, high contrast mode, and our new Felt theme with glass mode. To see these theming options in action, you can swap the theme, color scheme, and contrast mode used on PatternFly.org via the masthead theme switcher. 
+This release significantly expands our theming options, including style updates, high contrast mode, and our new Project Felt theme with glass mode. To see these theming options in action, you can swap the theme, color scheme, and contrast mode used on PatternFly.org via the masthead theme switcher. 
 
-#### Felt theme
+#### Project Felt theme
 
-We're excited to offer PatternFly's first major theme variant: the [Felt](/foundations-and-styles/theming#felt-theme) theme. Aimed at creating more dynamic, and eye-catching experiences, it introduces red accent colors, pill-shaped radii, and our new glass mode for added depth. Best of all&mdash;Felt is built entirely with our design token system, meaning no breaking change is required to add Felt to your product.
+We're excited to offer PatternFly's first major theme variant: the [Project Felt](/foundations-and-styles/theming#project-felt-theme) theme. Aimed at creating more dynamic, and eye-catching experiences, it introduces red accent colors, pill-shaped radii, and our new glass mode for added depth. Best of all&mdash;Project Felt is built entirely with our design token system, meaning no breaking change is required to add Project Felt to your product.
 
 #### Glass mode
 
-Glass mode is a new contrast mode, used by default in the Felt theme and optionally available for implementation in the Default theme. "Glass", enabled by an intentional set of designs tokens, adds transparency and depth to specific components so UIs can feel more layered. 
+Glass mode is a new contrast mode, used by default in the Project Felt theme and optionally available for implementation in the Default theme. "Glass", enabled by an intentional set of designs tokens, adds transparency and depth to specific components so UIs can feel more layered. 
 
 When turned on, glass applies to the following components, including their uses within our extensions:
 
@@ -93,9 +93,20 @@ We’ve expanded our AI ecosystem to help you design and develop more efficientl
 - [PatternFly CLI:](https://github.com/patternfly/patternfly-cli) A new command-line tool designed to accelerate your workflow by automating project scaffolding, streamlining version upgrades, and handling repetitive development tasks.
 - [ai-helpers repo:](https://github.com/patternfly/ai-helpers) A collection of plugins and skills for accelerated workflows.
 
+### New ChatBot features
+
+We've continued to enhance and evolve the [ChatBot extension](/extensions/chatbot/overview) based on user feedback and product needs. Updates include:
+
+- **Improved documentation and design guidelines:** To keep documentation aligned with product patterns, we've updated references to the chat history drawer with consistent naming, and expanded our design guidelines for using [source cards](/extensions/chatbot/overview/design-guidelines/#source-cards) and [starting new chats](/extensions/chatbot/overview/design-guidelines/#starting-a-new-chat).
+- **Message layout and response actions:** To support more flexible messages, you can now [right align user messages](/extensions/chatbot/messages/#user-messages) (and related response actions) and [remove visible metadata from bot or user messages](/extensions/chatbot/messages/#bot-messages). Additionally, you can now [hide response actions](/extensions/chatbot/messages/#message-actions) until a user interacts with a message and use a [filled message action icon variant](/extensions/chatbot/messages/#message-actions) that applies on click.
+- **More options for source cards:** We've added a [non-paginated option for the message sources component](/extensions/chatbot/messages#messages-with-sources) that displays more source cards at once.
+- **More interactive deep thinking:** We added a [loading state option for messages with deep thinking](/extensions/chatbot/messages#messages-with-deep-thinking) that indicates when a model is still reasoning.
+- **More flexible message bar:** The [message bar](/extensions/chatbot/ui) now supports a controlled value when the `value` prop is set. We've also added a [message bar with custom attach menu and additional actions](/extensions/chatbot/ui/#message-bar-with-custom-attach-menu-and-additional-actions) example that shows how to place a customizable action icon at the start of the message bar and add extra actions (for example, a menu or label) via the `additionalActions` prop.
+
 <Divider />
 
 <Timestamp date={new Date(2025, 9)}>October 2025</Timestamp>
+
 ## PatternFly 6.4
 
 For the Q3 2025 PatternFly release, we're excited to introduce a beta version of our new high contrast mode, deliver significant accessibility enhancements from our latest audit, and launch a highly requested resizable columns feature for tables. We've also continued to evolve PatternFly AI with community-driven extension updates and new guidelines for AI-assisted code contributions. Updates for these key areas can be found here, in this quarter's release highlights.
