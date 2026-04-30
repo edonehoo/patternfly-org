@@ -15,13 +15,15 @@ When turned on, glass applies to the following components, including their uses 
 - Drawer
 - Login page 
 - Masthead
-- Navigation (docked)
+- Navigation
 - Page
 - Panel
 
 ### Background images
 
-The glass effect is most visible when placed over a background image. Background images should be selected or designed for each Red Hat product in collaboration with the Brand team. To retain readability and ensure proper contrast ratios are met, images shouldn't contain high levels of detail or extreme contrast. 
+The glass effect is most visible when placed over a background image. To retain readability and ensure proper contrast ratios are met, images shouldn't contain high levels of detail or extreme contrast. 
+
+Background images should be selected for each Red Hat product in collaboration with the Brand team.
 
 Text must never be placed directly on a background image&mdash;it should be placed within a container that has a background color or glass effect. Titles or headings with stronger font weights can be placed directly on background images only if they pass specific brand and contrast requirements.
 
@@ -43,7 +45,7 @@ There are a few technical constraints to abide by when using glass in your produ
 
 - **No glass-on-glass layering:** Never layer glass-enabled containers. Doing so can cause significant performance and accessibility problems. For example, child objects inside a blurred parent container can become illegibly blurred themselves. To mitigate this, we have intentionally adjusted the opacity of our background color design tokens to simulate depth without introducing extra blur.
 - **High contrast precedence:** If high-contrast mode is enabled, all glass effects must be automatically disabled to prioritize functional accessibility.
-- **User controls and preferences:** Because glass mode introduces legibility risks, any product utilizing glass must also let users swap between default contrast and high contrast modes via a theme switcher or preferences menu. Products should also respect the OS-level `prefers-reduced-transparency` media query, disabling glass or replacing it with a solid high-opacity background to accommodate users appropriately. 
+- **User controls and preferences:** Because some users might experience legibility issues in glass mode, any product utilizing glass must also let users swap to default contrast or high contrast via a theme switcher or preferences menu. Products should also respect the OS-level `prefers-reduced-transparency` media query, disabling glass or replacing it with a solid high-opacity background to accommodate users appropriately. 
 
 ## Glass design tokens 
 
@@ -51,12 +53,12 @@ The following tokens are used together to create the glass effect.
 
 | Token | Value (in Project Felt theme) | Usage |
 | --- | --- | --- |
-| `-pf-t--global--background--color--glass--primary--default` | Light mode value: #FFFFFF (60% opacity) <br />  Dark mode value: #292929 at 50% opacity | Base fill for glass containers. |
-| `-pf-t--global--background--filter--glass--default` | Light mode value: #C7C7C7 (25% opacity) <br />  Dark mode value: #C7C7C7 (15% opacity) | Overlay tint used to enhance blur visibility. |
-| `-pf-t--global--border--color--glass--default` | Light mode value: #FFFFFF (60% opacity) <br />  Dark mode value: #292929 (50% opacity) | Boundary highlight for glass surfaces. |
-| `-pf-t--global--border--radius--glass--default` |  #D6D6D6 with 16px radius | Default rounded border for glass element. |
-| `-pf-t--global--background--color--sticky--default` | Light mode value: #FFFFFF (100% opacity) <br />  Dark mode value: #292929 (100% opacity) | Solid background for sticky elements, like headers. |
-| `-pf-t--global--box-shadow--medium` | #292929 (15% opacity) | Shadow that signifies elevation. |
+| `--pf-t--global--background--color--glass--primary--default` | Light mode value: #FFFFFF (60% opacity) <br />  Dark mode value: #292929 at 50% opacity | Base fill for glass containers. |
+| `--pf-t--global--background--filter--glass--default` | Light mode value: #C7C7C7 (25% opacity) <br />  Dark mode value: #C7C7C7 (15% opacity) | Overlay tint used to enhance blur visibility. |
+| `--pf-t--global--border--color--glass--default` | Light mode value: #FFFFFF (60% opacity) <br />  Dark mode value: #292929 (50% opacity) | Boundary highlight for glass surfaces. |
+| `--pf-t--global--border--radius--glass--default` |  #D6D6D6 with 16px radius | Default rounded border for glass element. |
+| `--pf-t--global--background--color--sticky--default` | Light mode value: #FFFFFF (100% opacity) <br />  Dark mode value: #292929 (100% opacity) | Solid background for sticky elements, like headers. |
+| `--pf-t--global--box-shadow--medium` | #292929 (15% opacity) | Shadow that signifies elevation. |
 
 ## Best practices
 
