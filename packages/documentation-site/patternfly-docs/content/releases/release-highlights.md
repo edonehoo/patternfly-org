@@ -12,9 +12,9 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 This release brings exciting new options for your PatternFly projects, offering more choice and flexibility in how you use our design system. We’ve subtly refined our core visuals to better align with the Red Hat Design System while still maintaining the classic PatternFly experience you know. 
 
-A major milestone for this release is the introduction of our **new Project Felt theme**. This theme offers a bold new look for your products, with Red Hat-influenced styles and more visual depth, made possible by our **new glass mode**. More broadly, to ensure all our visual options remain inclusive, we’ve also launched a **high-contrast mode** for WCAG AAA accessibility across all themes.
+A major milestone for this release is Project Felt, PatternFly's first distinct theme variant that uses Red Hat–influenced styles. We're also shipping a new glass mode that adds transparency and depth to your UI, which is used by default with Project Felt. More broadly, to ensure all our visual options remain inclusive, we've also launched high-contrast mode for WCAG AAA accessibility across all themes.
  
-Alongside these theming milestones, we've added a few **new components and variants** tailored for Red Hat journeys, **revamped our website navigation** for better findability, and **expanded our AI resources** to keep your workflows moving forward.
+Alongside these theming milestones, we've added a few new components and variants, revamped our website navigation for better findability, and expanded our AI resources to keep your workflows moving forward.
 
 ### Promoted package versions
 
@@ -37,34 +37,23 @@ Alongside these theming milestones, we've added a few **new components and varia
 
 ### Updated theming options 
 
-This release significantly expands our theming options, including style updates, high contrast mode, and our new Project Felt theme with glass mode. To see these theming options in action, you can swap the theme, color scheme, and contrast mode used on PatternFly.org via the masthead theme switcher. 
+This release significantly expands our theming options with style updates, high contrast mode, the new Project Felt theme, and glass mode as a separate contrast layer that can pair with Project Felt or the Default theme. To see these options in action, swap the theme, color scheme, and contrast mode used on PatternFly.org via the masthead theme switcher. 
 
 #### Project Felt theme
 
-We're excited to offer PatternFly's first major theme variant: the [Project Felt](/foundations-and-styles/theming#project-felt-theme) theme. Aimed at creating more dynamic, and eye-catching experiences, it introduces red accent colors, pill-shaped radii, and our new glass mode for added depth. Best of all&mdash;Project Felt is built entirely with our design token system, meaning no breaking change is required to add Project Felt to your product.
+We're excited to offer PatternFly's first major theme variant: the [Project Felt](/foundations-and-styles/theming#project-felt-theme) theme. It targets more familiar Red-Hat experiences through red accent colors and pill-shaped radii. Glass mode (described in the next section) is enabled by default here for added transparency and depth. Best of all&mdash;Project Felt is built entirely with our design token system, meaning no breaking change is required to add it to your product.
 
 #### Glass mode
 
-Glass mode is a new contrast mode, used by default in the Project Felt theme and optionally available for implementation in the Default theme. "Glass", enabled by an intentional set of designs tokens, adds transparency and depth to specific components so UIs can feel more layered. 
+Glass mode is a new contrast mode, used by default in the Project Felt theme and available for implementation in the Default theme. "Glass", enabled by an intentional set of design tokens, adds transparency and depth to specific components so UIs can feel more layered. 
 
-When turned on, glass applies to the following components, including their uses within our extensions:
-
-- Card
-- Drawer
-- Login page
-- Masthead
-- Navigation (docked)
-- Page
-- Panel
-
-For implementation guidance, constraints, details about design tokens, and user opt-out, refer to the [glass mode developer handbook](/foundations-and-styles/theming/glass-mode-handbook/). 
+For implementation guidance, constraints, details about design tokens, and user opt-out, and the specifics of glass effect implementations on components, refer to the [glass mode developer handbook](/foundations-and-styles/theming/glass-mode-handbook/). 
 
 #### Style updates
 
 We've aligned styles in the classic PatternFly experience (now referred to as our [Default theme](/foundations-and-styles/theming)) more closely with the [Red Hat Design System](https://ux.redhat.com/). These changes enhance brand consistency and usability:
 - **Links:** Now feature a subtle gray dotted underline that becomes a solid, active color on hover/focus.
 - **Navigation:** Active items now utilize a vertical "accent" line for better visual emphasis.
-- **Card:** Added a border shadow to support clarity in dense content views.
 - **Controls:** Borders of controls are now more boldly outlined for better interaction indication.
 
 #### High contrast mode
@@ -78,7 +67,7 @@ High contrast can be enabled via a singular CSS class as described in the [high 
 We've added new variants to support our evolving visual language and Red Hat-specific user journeys: 
 
 - [Iconography:](/foundations-and-styles/iconography) We’ve updated our icon set to use Red Hat brand icons. This is an automatic change handled via a single class, ensuring cross-platform consistency without much manual lift.
-- [Hero](/components/hero) is a new card-like component for attention-grabbing callouts at the top of pages.
+- [Hero:](/components/hero) A new card-like component for attention-grabbing callouts at the top of pages.
 - [Docked navigation:](/components/navigation/react-demos#docked-nav) A space-saving solution that minimizes navigation items to icons while remaining expandable.
 - [Compass:](/ai/generative-uis/compass) A conversational-first layout for generative UI, placing a ChatBot bar below content with surrounding toolbars.
 
