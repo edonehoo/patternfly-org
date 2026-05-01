@@ -12,7 +12,7 @@ import { Divider, Timestamp } from '@patternfly/react-core';
 
 This release brings exciting new options for your PatternFly projects, offering more choice and flexibility in how you use our design system. We’ve subtly refined our core visuals to better align with the Red Hat Design System while still maintaining the classic PatternFly experience you know. 
 
-A major milestone for this release is Project Felt, PatternFly's first distinct theme variant that uses Red Hat–influenced styles. We're also shipping a new glass mode that adds transparency and depth to your UI, which is used by default with Project Felt. More broadly, to ensure all our visual options remain inclusive, we've also launched high-contrast mode for WCAG AAA accessibility across all themes.
+A major milestone for this release is Project Felt, PatternFly's first distinct theme variant that uses Red Hat–influenced styles. We're also shipping a new glass mode that adds transparency and depth to your UI. More broadly, to ensure all our visual options remain inclusive, we've also launched high-contrast mode for WCAG AAA accessibility across all themes.
  
 Alongside these theming milestones, we've added a few new components and variants, revamped our website navigation for better findability, and expanded our AI resources to keep your workflows moving forward.
 
@@ -41,11 +41,11 @@ This release significantly expands our theming options with style updates, high 
 
 #### Project Felt theme
 
-We're excited to offer PatternFly's first major theme variant: the [Project Felt](/foundations-and-styles/theming#project-felt-theme) theme. It targets more familiar Red-Hat experiences through red accent colors and pill-shaped radii. Glass mode (described in the next section) is enabled by default here for added transparency and depth. Best of all&mdash;Project Felt is built entirely with our design token system, meaning no breaking change is required to add it to your product.
+We're excited to offer PatternFly's first major theme variant: the [Project Felt](/foundations-and-styles/theming#project-felt-theme) theme. It targets more familiar Red-Hat experiences through red accent colors and pill-shaped radii. Best of all&mdash;Project Felt is built entirely with our design token system, meaning no breaking change is required to add it to your product.
 
 #### Glass mode
 
-Glass mode is a new contrast mode, used by default in the Project Felt theme and available for implementation in the Default theme. "Glass", enabled by an intentional set of design tokens, adds transparency and depth to specific components so UIs can feel more layered. 
+Glass mode is a new contrast mode that can be used in both the Default and Project Felt themes. "Glass", enabled by an intentional set of design tokens, adds transparency and depth to specific components so UIs can feel more layered. 
 
 For implementation guidance, constraints, details about design tokens, and user opt-out, and the specifics of glass effect implementations on components, refer to the [glass mode developer handbook](/foundations-and-styles/theming/glass-mode-handbook/). 
 
