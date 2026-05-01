@@ -11,12 +11,14 @@ source: glass-mode-handbook
 Glass mode is a contrast mode option that's enabled in our Project Felt theme by default and can be manually enabled in our Default theme. Glass adds transparency, blurring, and depth to the UI to create a more dynamic visual effect where brand-approved background images and layered UI elements subtly show through. 
 
 When turned on, glass applies to the following components, including their uses within our extensions:
-- Card
-- Drawer
-- Login page 
+- Login page
 - Masthead
 - Navigation
 - Page
+
+Additionally, glass can be manually enabled on the following components, via the `isGlass` prop: 
+- Card
+- Drawer
 - Panel
 
 ### Background images
