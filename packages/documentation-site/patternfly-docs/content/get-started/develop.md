@@ -76,13 +76,7 @@ If you wish to migrate an existing project to PatternFly you must install and co
 
 ## Using icons
 
-PatternFly utilizes [Red Hat UI icons](https://www.redhat.com/en/about/brand/standards/icons) (`rh-ui-*`), which are available in the [`@patternfly/react-icons` package](https://www.npmjs.com/package/@patternfly/react-icons). Refer to the [icon component](/components/icon) and guidance on the [iconography](/foundations-and-styles/iconography) foundations page for more implementation guidance.
-
-### Migrating to Red Hat icons
-
-We offer a script to help you migrate from previous React icon component names to Red Hat UI icons: [`pfToRhIcons.mjs`](https://github.com/patternfly/patternfly-react/blob/main/packages/react-icons/scripts/icons/pfToRhIcons.mjs). This script allows you to automatically migrate icons across your product, based on a best-guess mapping. Note that it will not catch every icon that can be updated, so you might need to manually check its work and make additional changes. 
-
-While you can still use the previous Font Awesome (`fa`, `fas`, `far`, and similar) or PatternFly (`pf`) icons if your product already relies on them, they are not the recommended path for new work. 
+PatternFly utilizes [Red Hat UI icons](https://www.redhat.com/en/about/brand/standards/icons) (`rh-ui-*`), which are available in the [`@patternfly/react-icons` package](https://www.npmjs.com/package/@patternfly/react-icons). Refer to the [icon component](/components/icon) and the [iconography](/foundations-and-styles/iconography) foundations page for implementation and usage guidance.
 
 ## Develop with HTML/CSS 
 

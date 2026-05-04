@@ -2,7 +2,7 @@
 id: Iconography
 section: foundations-and-styles
 ---
-import { Icon, Content, ContentVariants, Alert } from '@patternfly/react-core';
+import { Icon, Content, ContentVariants } from '@patternfly/react-core';
 import RhUiCheckCircleFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-check-circle-fill-icon';
 import RhUiErrorFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-error-fill-icon';
 import RhUiWarningFillIcon from '@patternfly/react-icons/dist/esm/icons/rh-ui-warning-fill-icon';
@@ -23,12 +23,11 @@ The [iconography documentation of the Red Hat Design System (RHDS)](https://ux.r
 
 In general, rely on the all-icons table on this page and supplement your needs with the RHDS catalog if needed. If there's no icon for your use case, [submit a new icon request](https://docs.google.com/forms/d/e/1FAIpQLSde61rTDD4keaZEA3JFzBPbQVJ5EgEkhNapsYoI6ajKCsX4_Q/viewform) to the Brand team.
 
-<Alert variant="info" title="Migrating to Red Hat icons" isInline>
-  <p>
-    To automatically migrate your Font Awesome and PatternFly icons to their respective Red Hat UI icons, you can use the
-    <a href="https://github.com/patternfly/patternfly-react/blob/main/packages/react-icons/scripts/icons/pfToRhIcons.mjs" target="_blank" rel="noopener noreferrer">pfToRhIcons.mjs script</a>. While you can still use Font Awesome or legacy PatternFly icons manually if necessary, they are no longer our recommended approach and should be replaced with Red Hat icons going forward. 
-  </p>
-</Alert>
+## Migrating to Red Hat icons
+
+To migrate from our previous Font Awesome and PatternFly icon sets without having to manually update every import, apply the `pf-v6-icon-set-rh-ui` class on an outer element (typically the `<html>` element). PatternFly uses the mapping in [`pfToRhIcons.mjs`](https://github.com/patternfly/patternfly-react/blob/main/packages/react-icons/scripts/icons/pfToRhIcons.mjs) to decide which legacy icons render as Red Hat UI icons. Not every legacy icon is mapped, so some might still require direct updates. This class also only points to the UI Red Hat icon set, not [microns](https://ux.redhat.com/foundations/iconography/#micron-icons) or [standard icons](https://ux.redhat.com/foundations/iconography/#standard-icons), which you might prefer for some scenarios.
+
+While you can still use the previous Font Awesome (`fa`, `fas`, `far`, and similar) or PatternFly (`pf`) icons if your product already relies on them, they are not the recommended path for new work.
 
 ## Inline icons
 
